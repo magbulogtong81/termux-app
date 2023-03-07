@@ -77,6 +77,8 @@ jobs:
             exit_on_error "Generate sha25sums failed for '$APK_VERSION_TAG' release."
           fi
 
+          echo "generated apks: $( ls app/build/outputs/apk/debug)"
+
       - name: Attach universal APK file
         uses: actions/upload-artifact@v3
         with:
